@@ -1,0 +1,43 @@
+@use "sass:math";
+@use "sass:color";
+
+$radius: 1rem;
+$gap: 1rem;
+$brand: #111827; // slate-900
+
+@mixin card {
+  background: white;
+  border-radius: $radius;
+  padding: 1.25rem;
+  box-shadow: 0 1px 2px rgba(2,6,23,.06), 0 1px 3px rgba(2,6,23,.1);
+}
+
+article.card { @include card; } 
+
+section {
+  .note {
+    @include card;
+    border: 1px solid #e5e7eb;
+  }
+}
+
+.btn {
+  @include card;
+  border: 1px solid #e5e7eb;
+}
+
+
+.form {
+  display: grid;
+  gap: .75rem;
+  .row {
+    display: grid;
+    gap: .4rem;
+    input, textarea {
+      padding: .7rem .9rem;
+      border: 1px solid #e2e8f0;
+      border-radius: .8rem;
+      &:focus { outline: none; box-shadow: 0 0 0 3px rgba(17,24,39,.15); border-color: $brand; }
+    }
+  }
+}

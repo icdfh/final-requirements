@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Финальный проект — ТЗ и примеры</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+ 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { inter: ['Inter','system-ui','Arial','sans-serif'] },
+            colors: { brand:'#111827', primary:'#111827', accent:'#4F46E5' }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="font-inter antialiased bg-slate-50 text-slate-900 selection:bg-indigo-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
